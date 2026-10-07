@@ -21,9 +21,11 @@ The goals:
 
 | # | Project | Description | Concepts |
 |---|---------|-------------|----------|
-| 1 | [Hello World](./01-hello-world) | My very first Python program | `print()` |
-| 2 | [Calculator](./02-calculator) | Simple calculator in the terminal | Functions, input, conditions |
-| 3 | [Guess the Number](./03-guess-the-number) | Guess a random number | Loops, `random` |
+| 1 | [Band Name Generator](./01-band-name-generator) | Answer two questions and get a band name | `input()`, `print()`, string concatenation |
+| 2 | [Tip Calculator](./02-tip-calculator) | Split a bill between friends, tip included | `float`, `int`, f-strings, `round()` |
+| 3 | [Password Generator](./03-password-generator) | Build a random password with the number of letters, symbols and numbers you choose | Lists, `for` loops, `random` |
+| 4 | [Rock Paper Scissors](./04-rock-paper-scissors) | Play against the computer, with ASCII art | Conditions, lists, `random`, multi-line strings |
+| 5 | [Calculator](./05-calculator) | Terminal calculator that keeps calculating with the previous result | Functions, dictionaries, `while` loop, recursion, importing your own module |
 
 > 🚧 More projects coming soon. This table grows as I learn.
 
@@ -38,7 +40,7 @@ The goals:
 
 ```bash
 # Clone the repository
-git clone https://github.com/<Hamza47hlial>/python-basic-projects.git
+git clone https://github.com/<your-username>/python-basic-projects.git
 
 # Go into the folder
 cd python-basic-projects
@@ -47,21 +49,28 @@ cd python-basic-projects
 ### Run a project
 
 ```bash
-cd 02-calculator
-python main.py
+cd 05-calculator
+python Calculator.py
 ```
 
 ## 🗂️ Repository Structure
 
 ```
 python-basic-projects/
-├── 01-hello-world/
-│   └── main.py
-├── 02-calculator/
-│   └── main.py
-├── 03-guess-the-number/
-│   └── main.py
+├── 01-band-name-generator/
+│   └── The_Band_Name_Generator.py
+├── 02-tip-calculator/
+│   └── The_Tip_Calculator.py
+├── 03-password-generator/
+│   └── Password_Generator.py
+├── 04-rock-paper-scissors/
+│   └── Rock_Paper_Scissors_Game.py
+├── 05-calculator/
+│   ├── Calculator.py
+│   └── Art.py
+To be continued .....
 └── README.md
+
 ```
 
 ## 🛠️ Skills Practiced
@@ -84,10 +93,6 @@ Feel free to open an issue or a pull request if you see something I can improve.
 ## 📬 Contact
 
 - GitHub: [@Hamza47hlial](https://github.com/Hamza47hlial)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
