@@ -40,7 +40,7 @@ The goals:
 
 ```bash
 # Clone the repository
-git clone https://github.com/<your-username>/python-basic-projects.git
+git clone https://github.com/<Hamza47hlial>/python-basic-projects.git
 
 # Go into the folder
 cd python-basic-projects
