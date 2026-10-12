@@ -120,10 +120,11 @@ def play():
 
         # Check if the current scene is an ending (a final part of the story)
         if "ending" in node:
-            print() # Print an empty line to make the output easier to read
-            for line in node["text"]: # Go through each line of the ending text and print it
+            print()  # Print an empty line to make the output easier to read
+            for line in node["text"]:  # Go through each line of the ending text and print it
                 print(line)
-            return node["ending"]     # Return the ending result and stop the function
+            # Return the ending result and stop the function
+            return node["ending"]
 
         answer = ask_choice(node["text"], node["options"])
         print()
@@ -134,8 +135,8 @@ def play():
 results = {"win": 0, "escape": 0, "dead": 0}
 
 while True:
-    outcome = play() # Start the game and get the player's ending result
-    results[outcome] += 1 # Add 1 to the counter for that ending
+    outcome = play()  # Start the game and get the player's ending result
+    results[outcome] += 1  # Add 1 to the counter for that ending
     print(f"\nWins: {results['win']} | Escapes: {results['escape']} | "
           f"Deaths: {results['dead']}")
 
