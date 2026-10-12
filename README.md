@@ -21,11 +21,14 @@ The goals:
 
 | # | Project | Description | Concepts |
 |---|---------|-------------|----------|
-| 1 | [Band Name Generator](./01-band-name-generator) | Answer two questions and get a band name | `input()`, `print()`, string concatenation |
-| 2 | [Tip Calculator](./02-tip-calculator) | Split a bill between friends, tip included | `float`, `int`, f-strings, `round()` |
-| 3 | [Password Generator](./03-password-generator) | Build a random password with the number of letters, symbols and numbers you choose | Lists, `for` loops, `random` |
-| 4 | [Rock Paper Scissors](./04-rock-paper-scissors) | Play against the computer, with ASCII art | Conditions, lists, `random`, multi-line strings |
-| 5 | [Calculator](./05-calculator) | Terminal calculator that keeps calculating with the previous result | Functions, dictionaries, `while` loop, recursion, importing your own module |
+| 1 | [Band Name Generator](./The_Band_Name_Generator.py) | Answer two questions and get a band name | `input()`, `print()`, string concatenation |
+| 2 | [Tip Calculator](./The_Tip_Calculator.py) | Split a bill between friends, tip included | `float`, `int`, f-strings, `round()` |
+| 3 | [Password Generator](./Password_Generator.py) | Build a random password with the number of letters, symbols and numbers you choose | Lists, `for` loops, `random` |
+| 4 | [Rock Paper Scissors](./Rock_Paper_Scissors_Game.py) | Play against the computer, with ASCII art | Conditions, lists, `random`, multi-line strings |
+| 5 | [Calculator](./Calculator) | Terminal calculator that keeps calculating with the previous result, with input validation and a divide-by-zero check | Functions, dictionaries, `while` loops, `try / except`, importing my own module |
+| 6 | [Blind Auction](./Auction) | Secret auction: each bidder enters a name and a bid, the screen is cleared between bidders, and the highest bid wins | Dictionaries, `max()` with `key=`, `while` loop, `break` |
+| 7 | [Hangman Game](./Hangman_Game) | Guess the hidden word letter by letter before you run out of 6 lives | Lists, loops, conditions, `random`, importing my own modules |
+| 8 | [Adventurer Game](./Adventurer_Game.py) | Text adventure in the Whispering Forest with several endings (win, escape, death) and a score tracker | Nested dictionaries, functions, `while` loops, input validation |
 
 > 🚧 More projects coming soon. This table grows as I learn.
 
@@ -40,7 +43,7 @@ The goals:
 
 ```bash
 # Clone the repository
-git clone https://github.com/<Hamza47hlial>/python-basic-projects.git
+git clone https://github.com/Hamza47hlial/python-basic-projects.git
 
 # Go into the folder
 cd python-basic-projects
@@ -49,7 +52,11 @@ cd python-basic-projects
 ### Run a project
 
 ```bash
-cd 05-calculator
+# Projects in a single file
+python Adventurer_Game.py
+
+# Projects in a folder (run them from inside the folder so the imports work)
+cd Calculator
 python Calculator.py
 ```
 
@@ -57,21 +64,25 @@ python Calculator.py
 
 ```
 python-basic-projects/
-├── 01-band-name-generator/
-│   └── The_Band_Name_Generator.py
-├── 02-tip-calculator/
-│   └── The_Tip_Calculator.py
-├── 03-password-generator/
-│   └── Password_Generator.py
-├── 04-rock-paper-scissors/
-│   └── Rock_Paper_Scissors_Game.py
-├── 05-calculator/
+├── Auction/
+│   ├── Auction_code.py
+│   └── art.py
+├── Calculator/
 │   ├── Calculator.py
-│   └── Art.py
-To be continued .....
+│   └── calculator_pic.py
+├── Hangman_Game/
+│   ├── hangman.py
+│   ├── hangman_art.py
+│   └── hangman_words.py
+├── Adventurer_Game.py
+├── Password_Generator.py
+├── Rock_Paper_Scissors_Game.py
+├── The_Band_Name_Generator.py
+├── The_Tip_Calculator.py
 └── README.md
-
 ```
+
+> To be continued...
 
 ## 🛠️ Skills Practiced
 
@@ -80,10 +91,10 @@ To be continued .....
 - [x] Loops (`for`, `while`)
 - [x] Functions
 - [x] Lists, dictionaries, tuples, sets
+- [x] Error handling (`try / except`)
+- [x] Modules (`random`, importing my own files)
 - [ ] File handling
-- [ ] Error handling (`try / except`)
 - [ ] Object-oriented programming
-- [ ] Modules and packages
 
 ## 🤝 Contributing
 
