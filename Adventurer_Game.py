@@ -96,6 +96,8 @@ story = {
 def ask_choice(text, options):
     """Shows the scene and keeps asking until the answer is a valid option."""
     # Build the "Type ..." hint from the options, so we never write it by hand
+    # Join all the options into one sentence, putting "or" between them, and add quotation marks around each option to make the hint clear.
+    # Example : If options = ["yes", "no", "maybe"], then hint becomes : '"yes" or "no" or "maybe"'
     hint = ' or '.join(f'"{option}"' for option in options)
     while True:
         # strip() ignores accidental spaces, lower() ignores capital letters
@@ -116,24 +118,24 @@ def play():
     while True:
         node = story[scene]
 
-        # An ending has no options: print it and stop
+        # Check if the current scene is an ending (a final part of the story)
         if "ending" in node:
-            print()
-            for line in node["text"]:
+            print() # Print an empty line to make the output easier to read
+            for line in node["text"]: # Go through each line of the ending text and print it
                 print(line)
-            return node["ending"]
+            return node["ending"]     # Return the ending result and stop the function
 
         answer = ask_choice(node["text"], node["options"])
         print()
         scene = node["options"][answer]  # move to the next scene
 
 
-# Keep track of how the player's adventures turned out
+# Create a dictionary to count how many times each ending happens
 results = {"win": 0, "escape": 0, "dead": 0}
 
 while True:
-    outcome = play()
-    results[outcome] += 1
+    outcome = play() # Start the game and get the player's ending result
+    results[outcome] += 1 # Add 1 to the counter for that ending
     print(f"\nWins: {results['win']} | Escapes: {results['escape']} | "
           f"Deaths: {results['dead']}")
 
